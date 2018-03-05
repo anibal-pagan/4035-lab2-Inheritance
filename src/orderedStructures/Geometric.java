@@ -33,4 +33,12 @@ public class Geometric extends Progression {
 //			value = this.nextValue(); 
 		return value; 
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(!(o instanceof Arithmetic)) {
+			return false;
+		}
+		else return (this.firstValue() == ((Geometric) o).firstValue() && this.commonFactor == ((Geometric) o).commonFactor);
+	}
 }
